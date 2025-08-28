@@ -21,7 +21,7 @@ https://github.com/vsenathipathi/ai-meeting-intelligence
 ![alt text](image.png)
 
 **Live URL:** 
-https://dfvjcc3cy7sqj.cloudfront.net
+http://meeting-intel-frontend.s3-website-us-east-1.amazonaws.com/
 
 ## Frontend Setup
 Framework: ReactJS, Tailwind<br>
