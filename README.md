@@ -11,6 +11,32 @@ Feature 2: Getting Insights/RAG<br>
 The second GUI block lists all the stored transcriptions by Title. User selects the title and Ask the query. Upon submission, the question is embedded using SentenceTransformer. The embedded question is searched against the chromadb collections retrieving the related chunks(Context).
 Both the Question and Context is passed to Ollama, which gives back the response.
 
+Feature 1: Upload & Embedding                         Feature 2: Insights / RAG
+--------------------------                          ----------------------------
+
+[User GUI: Upload File]  ──▶  [Store Locally]  ──▶  [Transcribe with Whisper.cpp] 
+                                                  │
+                                                  ▼
+                                          [Store Text + Metadata in SQLite]
+                                                  │
+                                                  ▼
+                                         [Chunk Text & Embed with SentenceTransformer]
+                                                  │
+                                                  ▼
+                                          [Store Embeddings in ChromaDB]
+                                                  │
+                                                  ▼
+[User GUI: Select Title & Ask Question]  ──▶  [Embed Question (SentenceTransformer)]
+                                                  │
+                                                  ▼
+                                       [Search ChromaDB for Relevant Chunks]
+                                                  │
+                                                  ▼
+                                        [Pass Question + Context to Ollama]
+                                                  │
+                                                  ▼
+                                      [Receive Response + Sources & Display in UI]
+
 ## Code repository
 
 https://github.com/vsenathipathi/ai-meeting-intelligence
